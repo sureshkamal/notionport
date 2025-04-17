@@ -11,73 +11,61 @@
 
   <style>
     @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
-
     .animate-float {
       animation: float 2s ease-in-out infinite;
     }
   </style>
-
 </head>
 
-<body class="font-sans bg-black text-white">
+<body class="font-sans bg-black text-white relative overflow-x-hidden">
 
-  <!-- Hero -->
-  <section style="margin-top: -100px;" class="min-h-screen flex flex-col justify-center items-center text-center px-4">
- 
-    <!-- gallexy Effect (Behind Everything) -->
-    <div id="galaxy-bg" class="absolute inset-0 z-0 opacity-100">
-    </div>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative">
 
-    <!-- Cloud Effect (Behind main elements) -->
-    <div style="margin-top: 130px;" class="absolute inset-0 z-0">
-      <div id="cloud-animation" class="absolute inset-0">
-      </div>
+    <!-- Galaxy Background -->
+    <div id="galaxy-bg" class="absolute inset-0 z-0 opacity-100"></div>
 
-      <!-- Black Overlay -->
+    <!-- Cloud Animation Overlay -->
+    <div class="absolute inset-0 z-0 mt-32">
+      <div id="cloud-animation" class="absolute inset-0"></div>
       <div class="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
     </div>
 
-    <div style="margin-top: 150px;" class="relative flex items-center justify-center">
+    <!-- Logo and Title -->
+    <div class="relative flex flex-col items-center justify-center mt-40 sm:mt-52 md:mt-64 z-10 space-y-6 sm:space-y-8">
+      <img src="static/images/JustLogo.png"
+        alt="NotionPort Logo"
+        class="animate-float w-4/5 sm:w-2/3 md:w-1/2 lg:w-1/3 max-w-[200px] object-contain" />
 
-      <!-- Floating Rocket Logo (JustLogo) -->
-      <img src="static/images/JustLogo.png" alt="NotionPort Logo" style="max-width: 30%;"
-        class="z-10 animate-float" />
-
-      <!-- Title (Static) -->
-      <img src="static/images/JUSTTITLE.png" alt="NotionPort Title"
-        style="max-width: 40%; margin-top: 10px; margin-left: -50px;" class="z-10" />
+      <img src="static/images/JUSTTITLE.png"
+        alt="NotionPort Title"
+        class="w-4/5 sm:w-3/5 md:w-2/5 max-w-md object-contain" />
     </div>
 
-    <div style="margin-top: -50px;" class="relative z-10 mt-12">
-      <a href="#coming-soon" class="bg-orange-600 hover:bg-orange-700 transition px-6 py-3 rounded-xl text-lg">
+    <!-- CTA Button -->
+    <div class="relative z-10 mt-8 sm:mt-10">
+      <a href="#coming-soon"
+         class="bg-orange-600 hover:bg-orange-700 transition px-6 py-3 rounded-xl text-lg">
         Join the Journey
       </a>
     </div>
-
   </section>
 
-  <!-- About -->
-  <section style="margin-top: 50px;" class="py-20 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-semibold mb-6">We’re building something bold.</h2>
+  <!-- About Section -->
+  <section class="py-20 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl font-semibold mb-6">We’re building something bold.</h2>
     <p class="text-gray-400 text-lg">
       NotionPort is your launchpad for creative mobile ideas. From productivity to lifestyle, each app we create is
       crafted with precision and passion.
     </p>
   </section>
 
-  <!-- Coming Soon -->
+  <!-- Coming Soon Section -->
   <section id="coming-soon" class="py-20 bg-gray-900 px-6 text-center">
-    <h3 class="text-3xl font-semibold mb-4">🚀 First App Drops Soon</h3>
+    <h3 class="text-2xl sm:text-3xl font-semibold mb-4">🚀 First App Drops Soon</h3>
     <p class="text-gray-400 max-w-xl mx-auto mb-6">
       Our debut app is on its way. Built with love and innovation, it's designed to surprise and inspire.
     </p>
@@ -108,9 +96,7 @@
       autoplay: true,
       path: "static/images/galexybg.json"
     });
-
   </script>
 
 </body>
-
 </html>
