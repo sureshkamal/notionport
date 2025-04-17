@@ -50,11 +50,11 @@
     <div style="margin-top: 150px;" class="relative flex items-center justify-center">
 
       <!-- Floating Rocket Logo (JustLogo) -->
-      <img src="{{ url_for('static', filename='images/JustLogo.png') }}" alt="NotionPort Logo" style="max-width: 30%;"
+      <img src="static/images/JustLogo.png" alt="NotionPort Logo" style="max-width: 30%;"
         class="z-10 animate-float" />
 
       <!-- Title (Static) -->
-      <img src="{{ url_for('static', filename='images/JUSTTITLE.png') }}" alt="NotionPort Title"
+      <img src="static/images/JUSTTITLE.png" alt="NotionPort Title"
         style="max-width: 40%; margin-top: 10px; margin-left: -50px;" class="z-10" />
     </div>
 
@@ -98,7 +98,7 @@
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: "{{ url_for('static', filename='images/clouds.json') }}"
+      path: "static/images/clouds.json"
     });
 
     var animation2 = lottie.loadAnimation({
@@ -106,7 +106,7 @@
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: "{{ url_for('static', filename='images/galexybg.json') }}"
+      path: "static/images/galexybg.json"
     });
 
   </script>
