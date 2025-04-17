@@ -32,11 +32,11 @@
 <body class="font-sans bg-black text-white">
 
   <!-- Hero -->
-  <section style="margin-top: -100px;" class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 mt-[-200px] sm:mt-[-100px]">
  
     <!-- gallexy Effect (Behind Everything) -->
-    <div id="galaxy-bg" class="absolute inset-0 z-0 opacity-100">
-    </div>
+    <div id="galaxy-bg" class="absolute inset-0 z-0 opacity-100 mt-[-200px] sm:mt-0">
+    </div>    
 
     <!-- Cloud Effect (Behind main elements) -->
     <div style="margin-top: 130px;" class="absolute inset-0 z-0">
@@ -44,21 +44,22 @@
       </div>
 
       <!-- Black Overlay -->
-      <div class="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
+      <div class="absolute top-0 left-0 right-0 h-[70vh] sm:h-[90vh] md:inset-0 bg-black opacity-50 pointer-events-none z-10"></div>
+
     </div>
 
-    <div style="margin-top: 150px;" class="relative flex items-center justify-center">
-
+    <div class="relative flex items-center justify-center mt-[380px] sm:mt-[150px]">
+    
       <!-- Floating Rocket Logo (JustLogo) -->
-      <img src="static/images/JustLogo.png" alt="NotionPort Logo" style="max-width: 30%;"
-        class="z-10 animate-float" />
-
+      <img src="static/images/JustLogo.png" alt="NotionPort Logo" style="max-width: 30%;" class="z-10 animate-float" />
+    
       <!-- Title (Static) -->
       <img src="static/images/JUSTTITLE.png" alt="NotionPort Title"
-        style="max-width: 40%; margin-top: 10px; margin-left: -50px;" class="z-10" />
+        class="z-10 max-w-[40%] mt-[10px] ml-[-10px] sm:ml-[-50px]" />
+    
     </div>
 
-    <div style="margin-top: -50px;" class="relative z-10 mt-12">
+    <div class="relative z-10 mt-[100px] sm:mt-12">
       <a href="#coming-soon" class="bg-orange-600 hover:bg-orange-700 transition px-6 py-3 rounded-xl text-lg">
         Join the Journey
       </a>
