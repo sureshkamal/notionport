@@ -11,52 +11,52 @@
 
   <style>
     @keyframes float {
-
+  
       0%,
       100% {
         transform: translateY(0);
       }
-
+  
       50% {
         transform: translateY(-10px);
       }
     }
-
+  
+    @keyframes spinCard {
+      0% {
+        transform: rotateY(0deg);
+      }
+  
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+  
     .animate-float {
       animation: float 2s ease-in-out infinite;
     }
-  </style>
+  
+    .hover\:spin-card:hover {
+      animation: spinCard 1s linear;
+    }
+    
 
+  </style>
 </head>
 
 <body class="font-sans bg-black text-white">
 
   <!-- Hero -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 mt-[-200px] sm:mt-[-100px]">
- 
-    <!-- gallexy Effect (Behind Everything) -->
-    <div id="galaxy-bg" class="absolute inset-0 z-0 opacity-100 mt-[-200px] sm:mt-0">
-    </div>    
-
-    <!-- Cloud Effect (Behind main elements) -->
+    <div id="galaxy-bg" class="absolute inset-0 z-0 opacity-100 mt-[-200px] sm:mt-0"></div>
     <div style="margin-top: 130px;" class="absolute inset-0 z-0">
-      <div id="cloud-animation" class="absolute inset-0">
-      </div>
-
-      <!-- Black Overlay -->
+      <div id="cloud-animation" class="absolute inset-0"></div>
       <div class="absolute top-0 left-0 right-0 h-[70vh] sm:h-[90vh] md:inset-0 bg-black opacity-50 pointer-events-none z-10"></div>
-
     </div>
 
     <div class="relative flex items-center justify-center mt-[380px] sm:mt-[150px]">
-    
-      <!-- Floating Rocket Logo (JustLogo) -->
       <img src="static/images/JustLogo.png" alt="NotionPort Logo" style="max-width: 30%;" class="z-10 animate-float" />
-    
-      <!-- Title (Static) -->
-      <img src="static/images/JUSTTITLE.png" alt="NotionPort Title"
-        class="z-10 max-w-[40%] mt-[10px] ml-[-10px] sm:ml-[-50px]" />
-    
+      <img src="static/images/JUSTTITLE.png" alt="NotionPort Title" class="z-10 max-w-[40%] mt-[10px] ml-[-10px] sm:ml-[-50px]" />
     </div>
 
     <div class="relative z-10 mt-[100px] sm:mt-12">
@@ -64,16 +64,81 @@
         Join the Journey
       </a>
     </div>
-
   </section>
 
   <!-- About -->
   <section class="relative z-20 py-20 px-6 max-w-4xl mx-auto text-center mt-[-30px] sm:mt-[50px]">
     <h2 class="text-4xl font-semibold mb-6">We’re building something bold.</h2>
     <p class="text-gray-400 text-lg">
-      NotionPort is your launchpad for creative mobile ideas. From productivity to lifestyle, each app we create is
-      crafted with precision and passion.
+      We are three passionate developers driven by curiosity and creativity. For us, innovation isn't just a goal — it's our hobby. 
+      We thrive on building, exploring, and bringing ideas to life. Stay tuned, because we love launching new things — and we’re just getting started.
     </p>
+  </section>
+
+  <!-- Under Construction Section -->
+  <section class="py-20 px-6 text-center bg-black">
+    <h3 class="text-3xl font-semibold mb-6">🛠️ Under Construction</h3>
+    <p class="text-gray-400 max-w-xl mx-auto mb-10">
+      We’re cooking up something incredible. Here’s a sneak peek of what’s loading next...
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-xl">
+        <div class="relative w-full max-w-xs mx-auto mb-4" style="aspect-ratio: 2 / 3;">
+          <div id="animemobile" class="absolute inset-0 w-full h-full"></div>
+        </div>
+        <h4 class="text-xl font-medium">Almost Ready...</h4>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl">
+        <div class="relative w-full max-w-xs mx-auto mb-4" style="aspect-ratio: 2 / 3;">
+          <div id="animer&d" class="absolute inset-0 w-full h-full"></div>
+        </div>
+        <h4 class="text-xl font-medium">Designing Dreams...</h4>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl">
+        <div class="relative w-full max-w-xs mx-auto mb-4" style="aspect-ratio: 2 / 3;">
+          <div id="animethinking" class="absolute inset-0 w-full h-full"></div>
+        </div>
+        <h4 class="text-xl font-medium">Idea Brewing...</h4>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl animate-pulse">
+        <div class="relative w-full max-w-xs mx-auto mb-4" style="aspect-ratio: 2 / 3;">
+          <div id="animeLoading" class="absolute inset-0 w-full h-full"></div>
+        </div>
+        <!-- <h4 class="text-xl font-medium">Idea Brewing...</h4> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="py-16 px-6 text-center">
+    <h3 class="text-3xl font-semibold mb-10">Meet the Creators</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      
+      <div class="bg-gray-800 p-6 rounded-xl transform hover:spin-card transition duration-700">
+        <div class="relative w-full max-w-xs mx-auto mb-4" style="aspect-ratio: 2 / 3;">
+          <div id="animegirl" class="absolute inset-0 w-full h-full"></div>
+        </div>
+        <h4 class="text-xl font-medium">Soumya</h4>
+        <p class="text-gray-400">Tech Dreamer</p>
+      </div>
+      
+      <div class="bg-gray-800 p-6 rounded-xl transform hover:spin-card transition duration-700">
+        <div class="relative w-full max-w-xs mx-auto mb-4" style="aspect-ratio: 2 / 3;">
+          <div id="animeboy" class="absolute inset-0 w-full h-full"></div>
+        </div>
+        <h4 class="text-xl font-medium">Sooraj</h4>
+        <p class="text-gray-400">Innovation Enthusiast</p>
+      </div>
+      
+      <div class="bg-gray-800 p-6 rounded-xl transform hover:spin-card transition duration-700">
+        <div class="relative w-full max-w-xs mx-auto mb-4" style="aspect-ratio: 2 / 3;">
+          <div id="animeman" class="absolute inset-0 w-full h-full"></div>
+        </div>
+        <h4 class="text-xl font-medium">Suresh</h4>
+        <p class="text-gray-400">Code Alchemist</p>
+      </div>
+
+    </div>
   </section>
 
   <!-- Coming Soon -->
@@ -102,12 +167,68 @@
       path: "static/images/clouds.json"
     });
 
-    var animation2 = lottie.loadAnimation({
+    var animation01 = lottie.loadAnimation({
       container: document.getElementById('galaxy-bg'),
       renderer: 'svg',
       loop: true,
       autoplay: true,
       path: "static/images/galexybg.json"
+    });
+
+    var animation02 = lottie.loadAnimation({
+      container: document.getElementById('animegirl'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: "static/images/animegirl.json"
+    });
+
+    var animation03 = lottie.loadAnimation({
+      container: document.getElementById('animeboy'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: "static/images/animeboy.json"
+    });
+
+    var animation04 = lottie.loadAnimation({
+      container: document.getElementById('animeman'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: "static/images/animeman.json"
+    });
+
+    var animation05 = lottie.loadAnimation({
+      container: document.getElementById('animemobile'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: "static/images/animemobile.json"
+    });
+
+    var animation06 = lottie.loadAnimation({
+      container: document.getElementById('animer&d'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: "static/images/animer&d.json"
+    });
+
+    var animation07 = lottie.loadAnimation({
+      container: document.getElementById('animethinking'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: "static/images/animethinking.json"
+    });
+
+    var animation08 = lottie.loadAnimation({
+      container: document.getElementById('animeLoading'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: "static/images/animeLoading.json"
     });
 
   </script>
